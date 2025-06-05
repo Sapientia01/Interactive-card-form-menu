@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* background-color: aquamarine; */
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.backgr {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  height: 100vh;
+  background: url(images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  z-index: -100;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+}
+.left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.right {
+  display: flex;
+  height: 100vh;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+}
+
+.front,
+.back {
+  background-size: auto;
+  background-repeat: no-repeat;
+  height: 248px;
+  width: 452px;
+  padding: 30px 25px;
+  color: #fff;
+}
+.front {
+  background-image: url(images/bg-card-front.png);
+  margin: 0px 0 0 80px;
+}
+.back {
+  background-image: url(images/bg-card-back.png);
+  margin: 0px 0 0 260px;
+}
+
+.back p {
+  margin: 80px 0 0 320px;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.idNo {
+  font-size: 38px;
+  letter-spacing: 3px;
+  margin: 55px 0 0 0;
+}
+.front div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 19px;
+  letter-spacing: 2.5px;
+  margin-top: 13px;
+  text-transform: uppercase;
+}
+
+form {
+  display: block;
+  width: 400px;
+  padding: 25px;
+  transform: scale(1.1) translateX(-30px);
+}
+
+.complete {
+  display: none;
+  flex-direction: column;
+  height: fit-content;
+  align-items: center;
+  transform: scale(1.1) translateX(-50px);
+}
+.complete img {
+  margin-bottom: 25px;
+}
+.Continue-btn {
+  padding: 13px 120px;
+  margin: 30px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  color: #fff;
+  background: linear-gradient(45deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  transition: all 0.3s ease;
+}
+
+.Continue-btn:hover {
+  background: #7d8084;
+  cursor: pointer;
+}
+.complete p {
+  font-size: 20px;
+  margin-top: 7px;
+}
+
+form > * {
+  margin: 0 0 15px 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.date div,
+.dateCvc {
+  display: flex;
+  gap: 15px;
+}
+
+.dateCvc .field {
+  width: 50%;
+}
+
+.date div input {
+  width: 50%;
+}
+
+label {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+input,
+button {
+  padding: 13px 20px;
+  margin: 10px 0;
+  border: 2px solid hsl(269, 22%, 65%);
+  border-radius: 6px;
+  font-size: 18px;
+}
+input.error {
+  border: 1px solid red;
+}
+.submit {
+  width: 100%;
+  border: none;
+  color: #fff;
+  background: linear-gradient(45deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  transition: all 0.3s ease;
+}
+.submit:hover {
+  background: hsl(270, 3%, 87%);
+  cursor: pointer;
+}
+
+.field .errors {
+  display: none;
+  color: red;
+  font-size: 14px;
+  margin-top: -3px;
+  padding-left: 3px;
+}
+
+.field .error {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .backgr {
+    display: none;
+  }
+  .backgrMob {
+    position: absolute;
+    display: block;
+    background: url(images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    z-index: -101;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .left {
+    /* background-image: url(images/bg-main-mobile.png);
+    background-size: 10%; */
+
+    background-repeat: no-repeat;
+    position: relative;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    /* justify-content: flex-start; */
+    width: 100%;
+    height: 55vh;
+    padding: 20px 20px 0 0;
+  }
+  .front,
+  .back {
+    position: absolute;
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 248px;
+    width: 452px;
+    padding: 30px 25px;
+    color: #fff;
+    margin: 0;
+  }
+  .front {
+    z-index: 22;
+    transform: scale(0.9) translateX(-80px) translateY(50px);
+  }
+  .back {
+    transform: scale(0.9) translateX(15px) translateY(-100px);
+  }
+  .right {
+    width: 100%;
+    height: fit-content;
+  }
+  form {
+    transform: scale(1) translateX(0);
+    width: 90%;
+  }
+}

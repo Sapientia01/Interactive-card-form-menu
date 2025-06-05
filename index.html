@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="backgr"></div>
+
+    <div class="wrapper">
+      <div class="left">
+        <div class="backgrMob"></div>
+        <div class="front">
+          <img class="logo" src="images/card-logo.svg" alt="" />
+          <h2 class="idNo">0000 0000 0000 0000</h2>
+          <div>
+            <p class="name">Chala Hiko</p>
+            <p class="exDate">00/00</p>
+          </div>
+        </div>
+        <div class="back">
+          <p class="cvcNo">123</p>
+        </div>
+      </div>
+      <div class="right">
+        <form class="form" novalidate>
+          <div class="field">
+            <label for="">Card holder Name</label>
+            <input
+              type="text"
+              class="nameInput"
+              placeholder="e.g. Chala Hiko"
+              required
+            />
+            <div class="nameError errors">Can't be blank</div>
+          </div>
+
+          <div class="field">
+            <label for="">Card Number</label>
+            <input
+              type="text"
+              id="idNoInput"
+              placeholder="e.g. 1234 5678 9123 0000"
+              pattee="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
+              required
+            />
+            <div class="idNoError errors">Can't be blank</div>
+          </div>
+          <div class="dateCvc">
+            <div class="field date">
+              <label for=""> Exp. Date (MM/YY) </label>
+              <div>
+                <input
+                  type="text"
+                  class="monthInput"
+                  placeholder="MM"
+                  pattee="[0-9]{2}"
+                  required
+                />
+                <input
+                  type="text"
+                  class="yearInput"
+                  placeholder="YY"
+                  pattee="[0-9]{2}"
+                  required
+                />
+              </div>
+              <div class="dateError errors">Can't be blank</div>
+            </div>
+            <div class="cvc field">
+              <label for=""> CVC</label>
+              <input
+                type="text"
+                class="cvcInput"
+                pattee="[0-9]{3}"
+                placeholder="e.g. 123"
+                required
+              />
+              <div class="cvcError errors">Can't be blank</div>
+            </div>
+          </div>
+          <button type="submit" class="submit">Confirm</button>
+        </form>
+        <div class="complete">
+          <img src="images/icon-complete.svg" alt="Complete" />
+          <h1>Thank You!</h1>
+          <p>We've added your card details</p>
+          <button class="Continue-btn">Continue</button>
+        </div>
+      </div>
+    </div>
+
+    <!---
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+   -->
+    <script src="script.js"></script>
+  </body>
+</html>
