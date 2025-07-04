@@ -1,4 +1,5 @@
 const form = document.querySelector("form");
+const continueBtn = document.querySelector(".Continue-btn");
 const complete = document.querySelector(".complete");
 let success = false;
 
@@ -75,4 +76,8 @@ form.addEventListener("submit", (event) => {
     form.style.display = "none";
     complete.style.display = "flex";
   }
+});
+
+continueBtn.addEventListener("click", () => {
+  window.location.reload();
 });
