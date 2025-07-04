@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Interactive card details form</title>
 
     <link
       rel="icon"
@@ -10,17 +12,14 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="import" href="component.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
 
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <div class="backgr"></div>
@@ -69,14 +68,14 @@
               <label for=""> Exp. Date (MM/YY) </label>
               <div>
                 <input
-                  type="text"
+                  type="number"
                   class="monthInput"
                   placeholder="MM"
                   pattee="[0-9]{2}"
                   required
                 />
                 <input
-                  type="text"
+                  type="number"
                   class="yearInput"
                   placeholder="YY"
                   pattee="[0-9]{2}"
@@ -88,7 +87,7 @@
             <div class="cvc field">
               <label for=""> CVC</label>
               <input
-                type="text"
+                type="number"
                 class="cvcInput"
                 pattee="[0-9]{3}"
                 placeholder="e.g. 123"
@@ -107,14 +106,6 @@
         </div>
       </div>
     </div>
-
-    <!---
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-   -->
     <script src="script.js"></script>
   </body>
 </html>
