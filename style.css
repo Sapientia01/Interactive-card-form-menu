@@ -2,9 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
 }
 body {
-  /* background-color: aquamarine; */
   width: 100%;
   height: 100vh;
   position: relative;
@@ -68,7 +68,7 @@ body {
 }
 
 .idNo {
-  font-size: 38px;
+  font-size: 30px;
   letter-spacing: 3px;
   margin: 55px 0 0 0;
 }
@@ -83,11 +83,20 @@ body {
 
 form {
   display: block;
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   padding: 25px;
   transform: scale(1.1) translateX(-30px);
 }
-
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
 .complete {
   display: none;
   flex-direction: column;
@@ -182,6 +191,12 @@ input.error {
   display: block;
 }
 
+@media (max-width: 1120px) {
+  .right {
+    justify-content: flex-end;
+    padding-right: 30px;
+  }
+}
 @media (max-width: 900px) {
   .backgr {
     display: none;
@@ -206,14 +221,10 @@ input.error {
     align-items: center;
   }
   .left {
-    /* background-image: url(images/bg-main-mobile.png);
-    background-size: 10%; */
-
     background-repeat: no-repeat;
     position: relative;
     flex-direction: column-reverse;
     align-items: flex-end;
-    /* justify-content: flex-start; */
     width: 100%;
     height: 55vh;
     padding: 20px 20px 0 0;
@@ -239,9 +250,22 @@ input.error {
   .right {
     width: 100%;
     height: fit-content;
+    justify-content: center;
+    padding-right: 0px;
   }
   form {
     transform: scale(1) translateX(0);
     width: 90%;
+    max-width: 500px;
+  }
+}
+@media (max-width: 550px) {
+  .front {
+    transform: scale(0.75) translateX(-20%) translateY(15%);
+    transform-origin: top right;
+  }
+  .back {
+    transform: scale(0.75) translateY(-40%);
+    transform-origin: top right;
   }
 }
