@@ -251,7 +251,7 @@ input.error {
     width: 100%;
     height: fit-content;
     justify-content: center;
-    padding-right: 0px;
+    padding: 0px;
   }
   form {
     transform: scale(1) translateX(0);
@@ -267,5 +267,9 @@ input.error {
   .back {
     transform: scale(0.75) translateY(-40%);
     transform-origin: top right;
+  }
+
+  .complete {
+    transform: scale(1.1) translateX(0px);
   }
 }
